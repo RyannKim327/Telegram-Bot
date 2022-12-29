@@ -38,7 +38,7 @@ module.exports = async (api, msg, m) => {
 						api.sendMessage(msg, message)
 						api.sendAudio(msg, fs.createReadStream(`temp/${title}.mp3`))
 						setTimeout(() => {
-							fs.unlink(`temp/${title}.mp3`)
+							fs.unlink(`temp/${title}.mp3`, (e) => {})
 						}, (60 * 1000))
 					}catch(e){
 						api.sendMessage(msg, e)

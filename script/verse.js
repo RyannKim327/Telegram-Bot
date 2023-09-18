@@ -35,8 +35,6 @@ module.exports = async (bot, msg, match, isReply) => {
 		v = lists[match[1]]
 	}else{
 		m = match[2]
-	}else{
-		m = match[1]
 	}
 	console.log("v: " + v)
 	console.log("m: " + m)

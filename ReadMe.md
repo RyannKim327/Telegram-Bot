@@ -3,4 +3,4 @@
 
 ---
 ### Introduction
-> We've beed developing facebook bot since 2021
+> We've beed developing facebook bot since 2022, and I 

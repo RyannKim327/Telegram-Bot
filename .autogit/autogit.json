@@ -5,5 +5,5 @@
   "silent": true,
   "commitMessage": "{ts.locale.date} {ts.locale.time} [Auto Commit]",
   "locale": "en-US",
-  "timeZone": "Europe/Berlin"
+  "timeZone": "Asia/Manila"
 }

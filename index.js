@@ -14,6 +14,7 @@ let start = () => {
 		if(isReply){}else{
 			bot.onText(re(files.prefix, cmd.cmd), (msg, match) => {
 				const com = require(`./script/${cmd.file}`)
+				
 			})
 		}
 	}

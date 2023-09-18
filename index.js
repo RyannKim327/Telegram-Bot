@@ -1,6 +1,5 @@
 const fs = require("fs")
 const cron = require("node-cron")
-
 const gateway = require("biblegateway-scrape")
 
 const tg = require("node-telegram-bot-api")

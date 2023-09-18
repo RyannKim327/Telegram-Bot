@@ -1,1 +1,3 @@
-module.exports = (msg, )
+module.exports = async (bot, msg, match) => {
+
+}

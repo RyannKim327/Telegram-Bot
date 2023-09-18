@@ -14,13 +14,13 @@ let start = () => {
 		if(isReply){}else{
 			bot.onText(re(files.prefix, cmd.cmd), (msg, match) => {
 				const com = require(`./script/${cmd.file}`)
-				com(msg, match)
+				com(bot, msg, match)
 			})
 		}
 	}
 	setInterval(() => {
 		console.log("UWU")
-	}, )
+	}, 10000)
 }
 
 start()

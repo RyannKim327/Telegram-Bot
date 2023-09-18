@@ -6,6 +6,10 @@ module.exports = async (bot, msg, match)  => {
 	for(let c = c < json.commands.length; c++){
 		let cmd = json.commands[c]
 		msg += `${cmd.title}\n- ${cmd.description}\nCommand: ${json.prefix}${cmd.cmd}`
+		if(c < json.commands.length - 1){
+			msg += "\n"
+		}
+		msg += "\n"
 	}
 	bot.sendMessage(msg.chat.id, msg)
 }

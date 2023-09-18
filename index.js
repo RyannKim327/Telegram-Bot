@@ -16,9 +16,6 @@ let start = () => {
 			bot.onText(re(files.prefix, cmd.cmd), (msg, match) => {
 				const com = require(`./script/${cmd.file}`)
 				com(bot, msg, match)
-				bot.sendMessage(msg.chat.id, "", {
-					
-				})
 			})
 		}
 	}

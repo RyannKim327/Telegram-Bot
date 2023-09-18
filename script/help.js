@@ -12,6 +12,6 @@ module.exports = async (bot, msg, match)  => {
 		_msg += "\n"
 	}
 	bot.sendMessage(msg.chat.id, _msg, {
-		"mention": msg.from.username
+		"reply_to_message_id": msg.message_id
 	})
 }

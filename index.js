@@ -12,9 +12,9 @@ let start = () => {
 		const cmd = command[c]
 		let isReply = cmd.isReply || false
 		if(isReply){}else{
-			bot.onText(re("/", ))
+			bot.onText(re(cmd, ))
 		}
 	}
 }
 
-start()
+star

@@ -14,15 +14,20 @@ let start = async () => {
 		const cmd = command[c]
 		let isReply = false
 		let isAdmin = cmd.admin || false
-		if(isAdmin){
-			
-		}
 		if(!willBreak){
-			bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
-				const com = require(`./script/${cmd.file}`)
-				com(bot, msg, match, isReply)
-				willBreak = true
-			})
+			if(isAdmin){
+				bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
+					const com = require(`./admin/${cmd.file}`)
+					com(bot, msg, match, isReply)
+					willBreak = true
+				})
+			}else{
+				bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
+					const com = require(`./script/${cmd.file}`)
+					com(bot, msg, match, isReply)
+					willBreak = true
+				})
+			}
 		}
 		if(willBreak){
 			break

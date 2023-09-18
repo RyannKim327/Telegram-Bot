@@ -7,7 +7,7 @@
 			"description": "To check, whether the bot is still alive or not",
 			"cmd": "check",
 			"file": "check",
-			"admin"
+			"admin": true
 		},
 		{
 			"title": "Help Desk",

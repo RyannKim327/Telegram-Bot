@@ -18,10 +18,11 @@ let start = async () => {
 		if(!willBreak){
 			if(isAdmin){
 				bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
-					msg.from.id.includes(configs.admins)
-					const com = require(`./admin/${cmd.file}`)
-					com(bot, msg, match, isReply)
-					willBreak = true
+					if(msg.from.id.includes(configs.admins)){
+						const com = require(`./admin/${cmd.file}`)
+						com(bot, msg, match, isReply)
+						willBreak = true
+					}
 				})
 			}else{
 				bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {

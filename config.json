@@ -1,0 +1,12 @@
+{
+	"prefix": "/",
+	"name": "Kimmy",
+	"commands": [
+		{
+			"title": "Help Desk",
+			"description": "A command where it sends you all the commands existed in this bot",
+			"cmd": "help",
+			"file": "cmd"
+		}
+	]
+}

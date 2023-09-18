@@ -6,27 +6,9 @@ const gateway = require("biblegateway-scrape")
 const tg = require("node-telegram-bot-api")
 const token = process.env['token']
 
-const music = require("./script/music")
-
 const bot = new tg(token, { polling: true })
 
 let start = () => {
-	bot.onText(/(.*)/, (msg) => {
-		let json = JSON.parse(fs.readFileSync("data.json", "utf8"))
-		const chatID = msg.chat.id
-		if(!json.threads.includes(chatID)){
-			json.threads += `${chatID}, `
-			console.log("Added")
-		}
-		fs.writeFileSync("data.json", JSON.stringify(json), "utf8")
-	})
-
-	bot.onText(/\/music\s([\w\W]+)/i, (msg, match) => {
-		const chatID = msg.chat.id
-		const m = match
-		music(bot, chatID, m)
-	})
-
 	cron.schedule("20 21 * * *", async () => {
 		let json = JSON.parse(fs.readFileSync("data.json", "utf8"))
 		let lists = json.threads.split(", ")
@@ -41,5 +23,13 @@ let start = () => {
 		scheduled: true,
 		timezone: "Asia/Manila"
 	})
+
+	const files = JSON.parse(fs.readFileSync("commands.js", "utf-8"))
+	const command = files.commands
+	for(let c = 0; c < command.length; c++){
+		const cmd = command[c]
+
+	}
+
 }
 start()

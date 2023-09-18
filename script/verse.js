@@ -30,11 +30,9 @@ module.exports = async (bot, msg, match, isReply) => {
 		"bsnd": "ANG SALITA NG DIYOS (Baybayin)"
 	}
 	let v = lists["1905"]
-	let m = ""
+	let m = match[2]
 	if(lists[match[1]] != undefined){
 		v = lists[match[1]]
-	}else{
-		m = match[2]
 	}
 	console.log("v: " + v)
 	console.log("m: " + m)

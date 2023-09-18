@@ -13,21 +13,12 @@ let start = async () => {
 	for(let c = 0; c < command.length; c++){
 		const cmd = command[c]
 		let isReply = false
-		
-		if(isReply){
+		if(!willBreak){
 			bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
 				const com = require(`./script/${cmd.file}`)
-				com(bot, msg, match)
+				com(bot, msg, match, )
 				willBreak = true
 			})
-		}else{
-			if(!willBreak){
-				bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
-					const com = require(`./script/${cmd.file}`)
-					com(bot, msg, match)
-					willBreak = true
-				})
-			}
 		}
 		if(willBreak){
 			break

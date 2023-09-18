@@ -6,7 +6,8 @@
 			"title": "Status Checker",
 			"description": "To check, whether the bot is still alive or not",
 			"cmd": "check",
-			"file": "check"
+			"file": "check",
+			"admin"
 		},
 		{
 			"title": "Help Desk",

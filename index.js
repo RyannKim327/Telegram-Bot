@@ -1,7 +1,7 @@
 const fs = require("fs")
 const re = require("./utils/regex")
 const tg = require("node-telegram-bot-api")
-const token = "" // process.env['token']
+const token = process.env['token']
 
 const bot = new tg(token, { polling: true })
 

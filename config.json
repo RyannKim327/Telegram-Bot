@@ -3,6 +3,12 @@
 	"name": "Kimmy",
 	"commands": [
 		{
+			"title": "Status Checker",
+			"description": "To check, whether the bot is still alive or not",
+			"cmd": "check",
+			"file": "check"
+		},
+		{
 			"title": "Help Desk",
 			"description": "A command where it sends you all the commands existed in this bot",
 			"cmd": "help",

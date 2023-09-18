@@ -1,3 +1,3 @@
 const re = require("./utils/regex")
 
-console.log(re("\/", ))
+console.log(re("\/", "test"))

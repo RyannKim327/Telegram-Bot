@@ -8,10 +8,10 @@ const bot = new tg(token, { polling: true })
 
 let start = async () => {
 	const files = JSON.parse(fs.readFileSync("config.json", "utf-8"))
-	const configs = JSON.parse(fs.readFileSync("data.json", "utf-8"))
 	const command = files.commands
 	let willBreak = false
 	for(let c = 0; c < command.length; c++){
+		const configs = JSON.parse(fs.readFileSync("data.json", "utf-8"))
 		const cmd = command[c]
 		let isReply = false
 		let isAdmin = cmd.admin || false

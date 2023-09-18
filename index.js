@@ -18,7 +18,7 @@ let start = async () => {
 		if(!willBreak){
 			if(isAdmin){
 				bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
-					if((msg.from.id)){
+					if(configs.admins.includes(msg.from.id)){
 						const com = require(`./admin/${cmd.file}`)
 						com(bot, msg, match, isReply)
 						willBreak = true

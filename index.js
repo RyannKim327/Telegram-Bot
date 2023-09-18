@@ -28,6 +28,7 @@ let start = () => {
 	const command = files.commands
 	for(let c = 0; c < command.length; c++){
 		const cmd = command[c]
+		bot.on
 	}
 
 }

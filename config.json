@@ -10,9 +10,9 @@
 		}
 		{
 			"title": "Bible Verse",
-			"description": "A command where it sends you all the commands existed in this bot",
-			"cmd": "help",
-			"file": "help"
+			"description": "A command for bible verse",
+			"cmd": "verse (.*)",
+			"file": "verse"
 		}
 	]
 }

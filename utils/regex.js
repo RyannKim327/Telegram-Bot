@@ -1,3 +1,6 @@
 module.exports = (prefix, pattern){
-	return new RegExp(pattern)
+	if(prefix == "/"){
+		prefix = "\\/"
+	}
+	return new RegExp(`${prefix}${pattern}`)
 }

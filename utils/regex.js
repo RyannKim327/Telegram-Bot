@@ -1,4 +1,4 @@
-module.exports = (prefix, pattern){
+module.exports = (prefix, pattern) =>{
 	if(prefix == "/"){
 		prefix = "\\/"
 	}

@@ -5,7 +5,7 @@ module.exports = async (bot, msg, match)  => {
 	let _msg = `Good day Mr/Ms. [@${msg.from.username}](tg://user?id=${msg.from.id}), I am "${json.name}". Here are the commands you may use for my service\n\n`
 	for(let c = 0; c < json.commands.length; c++){
 		let cmd = json.commands[c]
-		let tut = cmd.tut || cmd.cmd.replace("(.*)", "‹‹ query ››")
+		let tut = cmd.tut || cmd.cmd[0].replace("(.*)", "‹‹ query ››")
 		_msg += `${cmd.title}\n- ${cmd.description}\nCommand: ${json.prefix}${tut}`
 		if(c < json.commands.length - 1){
 			_msg += "\n"

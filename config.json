@@ -5,14 +5,19 @@
 		{
 			"title": "Help Desk",
 			"description": "A command where it sends you all the commands existed in this bot",
-			"cmd": "help",
+			"cmd": [
+				"help"
+			],
 			"file": "help"
 		},
 		{
 			"title": "Bible Verse",
 			"description": "A command for bible verse",
-			"cmd": "verse ([\\w]+) (.*)",
-			"tut": "verse ‹‹ version ›› ‹‹ query ››",
+			"cmd": [
+				"verse ([\\w]+) (.*)",
+				"verse (.*)"
+			],
+			"tut": "verse ‹‹ version (optional) ›› ‹‹ query ››",
 			"file": "verse"
 		}
 	]

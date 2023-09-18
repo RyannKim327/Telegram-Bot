@@ -14,11 +14,14 @@ let start = () => {
 		const cmd = command[c]
 		let isReply = false
 		if(isReply){}else{
-			bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
-				const com = require(`./script/${cmd.file}`)
-				com(bot, msg, match)
-				willBreak = true
-			})
+			for(let d = 0; d < cmd.cmd.length; d++){
+				let _cmd = cmd.cmd[d]
+				bot.onText(re(files.prefix, _cmd.trim()), (msg, match) => {
+					const com = require(`./script/${cmd.file}`)
+					com(bot, msg, match)
+					willBreak = true
+				})
+			}
 		}
 		if(willBreak){
 			break

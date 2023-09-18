@@ -37,6 +37,8 @@ module.exports = async (bot, msg, match) => {
 	}
 	let verse = await bible.verse(match[2], v)
 	let ve = ""
-	for(let )
-	bot.sendMessage(msg.chat.id, `Bible verse requested\n\n${verse.book}\n${verse.verse}`)
+	for(let c = 0; c < verse.length; c++){
+		ve += `${verse[c].book}\n${verse[c].verse}\n`
+	}
+	bot.sendMessage(msg.chat.id, `Bible verse requested\n\n${ve}`)
 }

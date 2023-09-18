@@ -31,12 +31,10 @@ module.exports = async (bot, msg, match, isReply) => {
 	}
 	let v = lists["1905"]
 	let m = ""
-	if(match[2] != undefined){
-		if(lists[match[1]] != undefined){
-			v = lists[match[1]]
-		}else{
-			m = match[2]
-		}
+	if(lists[match[1]] != undefined){
+		v = lists[match[1]]
+	}else{
+		m = match[2]
 	}else{
 		m = match[1]
 	}

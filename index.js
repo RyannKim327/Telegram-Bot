@@ -18,7 +18,7 @@ let start = () => {
 				com(bot, msg, match)
 				bot.sendMessage(msg.chat.id, "", {
 					reply_to_message_id: msg.message_id,
-					
+					parse_mode "Markdown"
 				})
 			})
 		}

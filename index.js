@@ -16,10 +16,10 @@ let start = () => {
 			bot.onText(re(files.prefix, cmd.cmd), (msg, match) => {
 				const com = require(`./script/${cmd.file}`)
 				com(bot, msg, match)
-				bot.sendMessage(msg.chat.id, "", {
-					reply_to_message_id: msg.message_id,
-					parse_mode "Markdown"
-				})
+				// bot.sendMessage(msg.chat.id, "", {
+				// 	reply_to_message_id: msg.message_id,
+				// 	parse_mode 
+				// })
 			})
 		}
 	}

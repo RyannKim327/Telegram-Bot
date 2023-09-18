@@ -12,6 +12,7 @@ module.exports = async (bot, msg, match)  => {
 		_msg += "\n"
 	}
 	bot.sendMessage(msg.chat.id, _msg, {
-		"reply_to_message_id": msg.message_id
+		"reply_to_message_id": msg.message_id,
+		"parse_mode": "Markdown"
 	})
 }

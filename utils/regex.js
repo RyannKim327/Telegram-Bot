@@ -1,6 +1,6 @@
 module.exports = (prefix, pattern) =>{
 	if(prefix == "/"){
-		prefix = "\\/"
+		prefix = "\/"
 	}
 	return new RegExp(`^${prefix}${pattern}$`, "gi")
 }

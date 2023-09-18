@@ -1,6 +1,6 @@
 const bible = require("biblegateway-scrape")
 
-module.exports = async (bot, msg, match) => {
+module.exports = async (bot, msg, match, isReply) => {
 	let lists = {
 		"1905": bible.version.TAG_ANG_DATING_BIBLIYA_1905,
 		"1978": bible.version.TAG_ANG_BIBLIA_1978,

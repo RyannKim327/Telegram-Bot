@@ -1,6 +1,6 @@
 const fs = require("fs")
 
-module.exports = async (bot, msg, match)  => {
+module.exports = async (bot, msg, match, isReply)  => {
 	const json = JSON.parse(fs.readFileSync("config.json", "utf-8"))
 	let _msg = `Good day Mr/Ms. [@${msg.from.username}](tg://user?id=${msg.from.id}), I am "${json.name}". Here are the commands you may use for my service\n\n`
 	for(let c = 0; c < json.commands.length; c++){

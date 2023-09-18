@@ -16,7 +16,7 @@ let start = async () => {
 		if(!willBreak){
 			bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
 				const com = require(`./script/${cmd.file}`)
-				com(bot, msg, match, )
+				com(bot, msg, match, isReply)
 				willBreak = true
 			})
 		}

@@ -1,5 +1,4 @@
 const fs = require("fs")
-const cron = require("node-cron")
 const tg = require("node-telegram-bot-api")
 const token = process.env['token']
 
@@ -15,6 +14,6 @@ let start = () => {
 			bot.onText()
 		}
 	}
-
 }
+
 start()

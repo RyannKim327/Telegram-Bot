@@ -5,18 +5,14 @@
 		{
 			"title": "Help Desk",
 			"description": "A command where it sends you all the commands existed in this bot",
-			"cmd": [
-				"help"
-			],
+			"cmd": "help",
 			"file": "help"
 		},
 		{
 			"title": "Bible Verse",
 			"description": "A command for bible verse",
-			"cmd": [
-				"verse (.*?) (.*)"
-			],
-			"tut": "verse ‹‹ version (optional) ›› ‹‹ query ››",
+			"cmd": "verse (1905|1978|2001|snd|niv|esv|kjv|nlt|b1905|b1978|b2001|bsnd) (.*)",
+			"tut": "verse ‹‹ version (1905|1978|2001|snd|niv|esv|kjv|nlt|b1905|b1978|b2001|bsnd) ›› ‹‹ query ››",
 			"file": "verse"
 		}
 	]

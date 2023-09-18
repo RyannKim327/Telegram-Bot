@@ -13,7 +13,6 @@ let start = () => {
 		let isReply = false
 		if(isReply){}else{
 			bot.onText(re(files.prefix, cmd.cmd), (msg, match) => {
-				console.log("test")
 				const com = require(`./script/${cmd.file}`)
 				com(bot, msg, match)
 			})

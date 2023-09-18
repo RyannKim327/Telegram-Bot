@@ -9,7 +9,7 @@ module.exports = async (bot, msg, match)  => {
 		if(c < json.commands.length - 1){
 			_msg += "\n"
 		}
-		msg += "\n"
+		_msg += "\n"
 	}
-	bot.sendMessage(msg.chat.id, msg)
+	bot.sendMessage(msg.chat.id, _msg)
 }

@@ -1,4 +1,5 @@
 const fs = require("fs")
+const re = require("./utils/regex")
 const tg = require("node-telegram-bot-api")
 const token = process.env['token']
 
@@ -11,7 +12,7 @@ let start = () => {
 		const cmd = command[c]
 		let isReply = cmd.isReply || false
 		if(isReply){}else{
-			bot.onText()
+			bot.onText(re("/", ))
 		}
 	}
 }

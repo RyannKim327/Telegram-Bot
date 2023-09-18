@@ -30,12 +30,19 @@ module.exports = async (bot, msg, match) => {
 		"bsnd": "ANG SALITA NG DIYOS (Baybayin)"
 	}
 	let v = lists["1905"]
+	let m = ""
 	if(match[2] != undefined){
 		if(lists[match[1]] != undefined){
 			v = lists[match[1]]
+		}else{
+			m = match[2]
 		}
+	}else{
+		m = match[1]
 	}
-	let verse = await bible.verse(match[2], v)
+	console.log("v: " + v)
+	console.log("m: " + m)
+	let verse = await bible.verse(m, v)
 	let ve = ""
 	for(let c = 0; c < verse.length; c++){
 		ve += `${verse[c].book}\n${verse[c].verse}\n`

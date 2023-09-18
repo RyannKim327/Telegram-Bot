@@ -6,7 +6,7 @@ const token = "6406000437:AAEwBYcrGfzVc9z9pEAoth7VKP77UdVeUp8"// process.env['to
 
 const bot = new tg(token, { polling: true })
 
-let start = () => {
+let start = async () => {
 	const files = JSON.parse(fs.readFileSync("config.json", "utf-8"))
 	const command = files.commands
 	let willBreak = false
@@ -16,11 +16,13 @@ let start = () => {
 		if(isReply){}else{
 			for(let d = 0; d < cmd.cmd.length; d++){
 				let _cmd = cmd.cmd[d]
-				bot.onText(re(files.prefix, _cmd.trim()), (msg, match) => {
-					const com = require(`./script/${cmd.file}`)
-					com(bot, msg, match)
-					willBreak = true
-				})
+				if(!willBreak){
+					bot.onText(re(files.prefix, _cmd.trim()), (msg, match) => {
+						const com = require(`./script/${cmd.file}`)
+						com(bot, msg, match)
+						willBreak = true
+					})
+				}
 			}
 		}
 		if(willBreak){

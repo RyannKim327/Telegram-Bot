@@ -12,7 +12,7 @@ let start = () => {
 		const cmd = command[c]
 		let isReply = cmd.isReply || false
 		if(isReply){}else{
-			bot.onText(re(files.prefix, ))
+			bot.onText(re(files.prefix, cmd.cmd))
 		}
 	}
 }

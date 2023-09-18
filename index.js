@@ -29,8 +29,9 @@ let start = () => {
 	for(let c = 0; c < command.length; c++){
 		const cmd = command[c]
 		let isReply = cmd.isReply || false
-		if(isReply)
-		bot.onText()
+		if(isReply){}else{
+			bot.onText()
+		}
 	}
 
 }

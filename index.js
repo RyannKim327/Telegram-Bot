@@ -14,7 +14,7 @@ let start = () => {
 		const cmd = command[c]
 		let isReply = false
 		if(isReply){}else{
-			bot.onText(re(files.prefix, cmd.cmd), (msg, match) => {
+			bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
 				const com = require(`./script/${cmd.file}`)
 				com(bot, msg, match)
 				willBreak = true

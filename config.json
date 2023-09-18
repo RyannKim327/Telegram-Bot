@@ -11,7 +11,8 @@
 		{
 			"title": "Bible Verse",
 			"description": "A command for bible verse",
-			"cmd": "verse (.*)",
+			"cmd": "verse ([\\w]+) (.*)",
+			"tut": "verse ‹‹ version ›› ‹‹ query ››",
 			"file": "verse"
 		}
 	]

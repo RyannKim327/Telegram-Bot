@@ -26,6 +26,9 @@ let start = async () => {
 			break
 		}
 	}
+	bot.on("message", (msg) => {
+		bot.sendMessage(msg.chat.id, msg.from.id)
+	})
 	setInterval(() => {
 		console.log("UWU")
 	}, 10000)

@@ -18,6 +18,9 @@ let start = () => {
 			})
 		}
 	}
+	setInterval(() => {
+		console.log("UWU")
+	}, )
 }
 
 start()

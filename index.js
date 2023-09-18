@@ -9,6 +9,7 @@ const bot = new tg(token, { polling: true })
 let start = () => {
 	const files = JSON.parse(fs.readFileSync("config.json", "utf-8"))
 	const command = files.commands
+	let willBreak = false
 	for(let c = 0; c < command.length; c++){
 		const cmd = command[c]
 		let isReply = false
@@ -16,8 +17,11 @@ let start = () => {
 			bot.onText(re(files.prefix, cmd.cmd), (msg, match) => {
 				const com = require(`./script/${cmd.file}`)
 				com(bot, msg, match)
-				break
+				willBreak = true
 			})
+		}
+		if(willBreak){
+			break
 		}
 	}
 	setInterval(() => {

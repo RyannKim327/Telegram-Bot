@@ -8,7 +8,7 @@ const bot = new tg(token, { polling: true })
 
 let start = async () => {
 	const files = JSON.parse(fs.readFileSync("config.json", "utf-8"))
-	const files = JSON.parse(fs.readFileSync("config.json", "utf-8"))
+	const configs = JSON.parse(fs.readFileSync("data.json", "utf-8"))
 	const command = files.commands
 	let willBreak = false
 	for(let c = 0; c < command.length; c++){
@@ -16,7 +16,7 @@ let start = async () => {
 		let isReply = false
 		let isAdmin = cmd.admin || false
 		if(!willBreak){
-			if(isAdmin){
+			if(isAdmin && msg.from.id){
 				bot.onText(re(files.prefix, cmd.cmd.trim()), (msg, match) => {
 					const com = require(`./admin/${cmd.file}`)
 					com(bot, msg, match, isReply)

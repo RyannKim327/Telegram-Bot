@@ -28,7 +28,8 @@ let start = () => {
 	const command = files.commands
 	for(let c = 0; c < command.length; c++){
 		const cmd = command[c]
-		let isReply = cmd.
+		let isReply = cmd.isReply || false
+		if(isReply)
 		bot.onText()
 	}
 

@@ -8,7 +8,10 @@
 ---
 ### Credits
 1. Lester Navarra
-2. John 
+2. John Paul Caigas
+3. Earl Shine Sawir
+4. Mark Kevin Manalo
+5. 
 
 ---
 ### License [MIT]

@@ -17,6 +17,7 @@
 8. Mart Anthony Salazar
 9. Mark Glen Sadang Miguel
 
+> These people are deserved to be credited, due to the dedication that they given to me to teach me what they've learned. Please don't remove these people if ever.
 
 ---
 ### License [MIT]

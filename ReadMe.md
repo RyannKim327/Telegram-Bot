@@ -13,7 +13,10 @@
 4. Mark Kevin Manalo
 5. Jovanny De Leon
 6. John Jeremy Antiguo
-
+7. John Roy Lapida Calimlim
+8. Mart Anthony Salazar
+9. Mark Glen Sadang Miguel
+10. 
 
 ---
 ### License [MIT]

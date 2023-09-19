@@ -13,7 +13,12 @@ module.exports = async (bot, msg, match, isReply)  => {
 			}
 			_msg += "\n"
 		}else if(!cmd.admin){
-
+			let tut = cmd.tut || cmd.cmd.replace("(.*)", "‹‹ query ››")
+			_msg += `${cmd.title}\n- ${cmd.description}\nCommand: ${json.prefix}${tut}`
+			if(c < json.commands.length - 1){
+				_msg += "\n"
+			}
+			_msg += "\n"
 		}
 	}
 	bot.sendMessage(msg.chat.id, _msg, {

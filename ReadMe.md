@@ -12,7 +12,8 @@
 3. Earl Shine Sawir
 4. Mark Kevin Manalo
 5. Jovanny De Leon
-6. 
+6. John Jeremy Antiguo
+
 
 ---
 ### License [MIT]

@@ -34,8 +34,6 @@ module.exports = async (bot, msg, match, isReply) => {
 	if(lists[match[1]] != undefined){
 		v = lists[match[1]]
 	}
-	console.log("v: " + v)
-	console.log("m: " + m)
 	let verse = await bible.verse(m, v)
 	let ve = ""
 	for(let c = 0; c < verse.length; c++){

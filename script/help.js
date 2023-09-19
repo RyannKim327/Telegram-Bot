@@ -12,7 +12,7 @@ module.exports = async (bot, msg, match, isReply)  => {
 				_msg += "\n"
 			}
 			_msg += "\n"
-		}
+		}else if(cmd.admin)
 	}
 	bot.sendMessage(msg.chat.id, _msg, {
 		// "reply_to_message_id": msg.message_id,

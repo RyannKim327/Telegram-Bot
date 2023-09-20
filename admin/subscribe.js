@@ -6,5 +6,6 @@ module.exports = (bot, msg, match) => {
 	}else{
 		json.subscribe += bot.message_thread_id + ", "
 		bot.sendMessage(msg.chat.id, "This thread is now subscribed to a special feature.")
+		fs.writeFileSync("data.json", JSON)
 	}
 }

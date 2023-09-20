@@ -4,6 +4,7 @@ module.exports = (bot, msg, match) => {
 	if(json.subscribe.includes(bot.chat.message_thread_id)){
 		bot.sendMessage(msg.chat.id, "This thread is already added.")
 	}else{
+		json.subscribe += bot.chat.message_thread_id
 		bot.sendMessage(msg.chat.id, "This thread is now subscribed to a special feature.")
 	}
 }

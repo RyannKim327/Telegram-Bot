@@ -5,7 +5,7 @@ module.exports = (bot, msg, match) => {
 		bot.sendMessage(msg.chat.id, "This thread is already added.")
 	}else{
 		json.subscribe += bot.message_thread_id + ", "
+		fs.writeFileSync("data.json", JSON.stringify(json), "utf-8")
 		bot.sendMessage(msg.chat.id, "This thread is now subscribed to a special feature.")
-		fs.writeFileSync("data.json", JSON)
 	}
 }
